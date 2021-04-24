@@ -10,6 +10,9 @@ A robot that autonomously writes inspirational material on a notecard. This proj
 - [ ] Display messages with the ESP's OLED screen
 
 ## Technologies
+* [QuotesJoy API](https://rapidapi.com/lattice-data-lattice-data-default/api/quotejoy) - A database of inspirational quotes
+* ESP8266 Library (2.7.4) - by ESP8266 Community via Boards Manager
+* ESP8266 and ESP32 OLED Driver for SSD1306 Display (4.2.0) - by ThingPulse via Library Manager
 
 ## Hardware, Equipment, & Tools
 1. [Arduino Uno](https://store.arduino.cc/usa/arduino-uno-rev3)
@@ -20,3 +23,6 @@ A robot that autonomously writes inspirational material on a notecard. This proj
 <img src="https://store-cdn.arduino.cc/usa/catalog/product/cache/1/image/520x330/604a3538c15e081937dbfbd20aa60aad/a/0/a000066_featured_1_2.jpg" alt="Arduino Uno" width="400">
 
 <img src="https://images-na.ssl-images-amazon.com/images/I/61PGIz41iaL._AC_SL1200_.jpg" alt="MakerFocus ESP8266 OLED WiFi Development Board" width="400">
+
+
+Note: You may need [drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to set up a virtual COM port.
