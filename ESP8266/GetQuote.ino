@@ -1,16 +1,17 @@
 #include <Arduino.h>
 
 #include <ArduinoJson.h>
+#include "SSD1306Wire.h"
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 #include <ESP8266HTTPClient.h>
 #include <WiFiClientSecureBearSSL.h>
+
 const uint8_t fingerprint[20] = {0x2e, 0x3b, 0xd8, 0xe7, 0x5a, 0x6d, 0xe3, 0xe3, 0xfb, 0x81, 0x1e, 0xa6, 0x4b, 0xa4, 0x00, 0x1c, 0x1b, 0xeb, 0xca, 0x2a};
-
-
-
 ESP8266WiFiMulti WiFiMulti;
+
+SSD1306Wire display(0x3c, 4, 5, GEOMETRY_128_32);
 
 void setup() {
 
@@ -29,8 +30,23 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
   WiFiMulti.addAP("SSID", "PASSWORD");
+
+  display.init();
+  display.flipScreenVertically();
 }
 
+
+void displaySource(String source) {
+
+  display.clear();
+  display.resetDisplay();
+  
+  display.setFont(ArialMT_Plain_10);
+  display.setTextAlignment(TEXT_ALIGN_LEFT);
+  display.drawString(84, 20, "Quote from");
+  display.drawString(42, 10, source);
+  display.display();
+}
 
 
 void parseJson(String json) {
@@ -55,6 +71,8 @@ void parseJson(String json) {
   Serial.println(quote);
   Serial.print("Source: ");
   Serial.println(source);
+
+  displaySource(source);
 }
 
 
@@ -76,7 +94,7 @@ void loop() {
       Serial.println("Connected to API endpoint");
       Serial.print("[HTTPS] GET...\n");
 
-      https.addHeader("x-rapidapi-key", "<INSERT_API_KEY>");
+      https.addHeader("x-rapidapi-key", "API-KEY");
       https.addHeader("x-rapidapi-host", "quotejoy.p.rapidapi.com");
       
       // start connection and send HTTP header
@@ -103,6 +121,6 @@ void loop() {
     }
   }
 
-  Serial.println("Wait 10s before next round...");
+  Serial.println("Next round...");
   delay(10000);
 }
