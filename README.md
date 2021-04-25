@@ -6,11 +6,11 @@ A robot that autonomously writes inspirational material on a notecard. This proj
 - [ ] Assemble robot with 3D printed parts
 - [ ] Interface Arduino Uno with the stepper motors
 - [ ] Program stepper motors to write letters & lift the pencil
-- [ ] Obtain acess to a REST API offering inspiring quotes
+- [x] Obtain acess to a REST API offering inspiring quotes
 - [ ] Display messages with the ESP's OLED screen
 
 ## Technologies
-* [QuotesJoy API](https://rapidapi.com/lattice-data-lattice-data-default/api/quotejoy) - A database of inspirational quotes
+* [QuoteJoy API](https://rapidapi.com/lattice-data-lattice-data-default/api/quotejoy) - A database of inspirational quotes
 * ESP8266 Library (2.7.4) - by ESP8266 Community via Boards Manager
 * ESP8266 and ESP32 OLED Driver for SSD1306 Display (4.2.0) - by ThingPulse via Library Manager
 
