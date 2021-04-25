@@ -1,7 +1,7 @@
 # Inspo-Bot
 A robot that autonomously writes inspirational material on a notecard. This project is for **Comet Hack 2021**, a hardware & software competition hosted by IEEE-UTD.
 
-<img src="https://github.com/crsz20/Inspo-Bot/blob/master/logo.png" alt="Logo" width="400">
+<img src="https://github.com/crsz20/Inspo-Bot/blob/master/images/logo.png" alt="Logo" width="400">
 
 ###
 
@@ -30,3 +30,11 @@ A robot that autonomously writes inspirational material on a notecard. This proj
 
 
 Note: You may need [drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) to set up a virtual COM port.
+
+###
+
+## Progress
+
+<img src="https://github.com/crsz20/Inspo-Bot/blob/master/images/InspoParts.jpg" alt="Logo" width="500">
+
+<img src="https://github.com/crsz20/Inspo-Bot/blob/master/images/InspoMonitoring.PNG" alt="Logo" width="1200">
