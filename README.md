@@ -8,7 +8,7 @@ A robot that autonomously writes inspirational material on a notecard. This proj
 - [ ] Program stepper motors to write letters & lift the pencil
 - [x] Obtain acess to a REST API offering inspiring quotes
 - [ ] Relay quotes from the ESP to the Arduino
-- [ ] Display messages with the ESP's OLED screen
+- [x] Display messages with the ESP's OLED screen
 
 ## Technologies
 * [QuoteJoy API](https://rapidapi.com/lattice-data-lattice-data-default/api/quotejoy) - A database of inspirational quotes
