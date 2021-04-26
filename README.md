@@ -2,6 +2,7 @@
 A robot that autonomously writes inspirational material on a notecard. This project is for **Comet Hack 2021**, a hardware & software competition hosted by IEEE-UTD.
 
 Team: Cristian Cruz, Ian Crochet, & Anthony Parker
+
 <img src="https://github.com/crsz20/Inspo-Bot/blob/master/images/logo.png" alt="Logo" width="400">
 
 ###
